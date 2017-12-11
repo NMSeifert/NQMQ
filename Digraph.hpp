@@ -43,6 +43,7 @@ public:
 	   distMatrix.resize(numberOfVertices);
 	   for (int i = 0; i < numberOfVertices; i++) distMatrix[i].resize(numberOfVertices);
    }
+   //Implemented a destructor to clear allocated memory
    ~Digraph() {
         for(int i = 0; i < vertex.size(); i++) {
             delete vertex[i];
