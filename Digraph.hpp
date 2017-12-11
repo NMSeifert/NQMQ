@@ -1,6 +1,6 @@
 // digraph.hpp -- adjacency matrix based directed graph
 // c. 2017 T. O'Neil, C. Reilly; Node class c. 2008 P. Rathore
-
+// Destructor implemented by Nicholas Seifert, 2017
 #ifndef DIGRAPH_HPP
 #define DIGRAPH_HPP
 
@@ -44,8 +44,10 @@ public:
 	   for (int i = 0; i < numberOfVertices; i++) distMatrix[i].resize(numberOfVertices);
    }
    //Implemented a destructor to clear allocated memory
-   ~Digraph() {
-        for(int i = 0; i < vertex.size(); i++) {
+   ~Digraph()
+   {
+        for(int i = 0; i < vertex.size(); i++)
+		{
             delete vertex[i];
         }
    }
